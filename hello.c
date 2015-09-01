@@ -4,23 +4,11 @@ int main()
 {
   printf("\nfarhenheit to celsius conversion\n_________________________________\n\n");
   float fahr, celsius;
-  float lower, step, upper;
-  lower = 0;
-  upper = 300;
-  step = 20;
-  fahr = lower;
-  while (fahr <= upper) {
-    celsius = (5.0 / 9.0) * (fahr - 32.0);
-    printf("%3.0f\t%6.1f\n", fahr, celsius);
-    fahr = fahr + step;
-  }
+  for (fahr = 0; fahr <= 300; fahr = fahr + 20)
+    printf("%3.0f\t%6.1f\n", fahr, (fahr + 32) * (5.0 / 9.0));
   printf("_________________________________\n\ncelsius to farhenheit conversion\n_________________________________\n\n");
-  celsius = lower;
-  while (celsius <= upper) {
-    fahr = ((9.0 / 5.0) * celsius) + 32;
-    printf("%3.0f\t%6.1f\n", celsius, fahr);
-    celsius = celsius + step;
-  }
+  for (celsius = 0; celsius <= 300; celsius = celsius + 20)
+    printf("%3.0f\t%6.1f\n", celsius, (celsius * (9.0 / 5.0)) - 32);
   return 0;
 }
 
