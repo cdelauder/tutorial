@@ -2,7 +2,7 @@
 
 int main()
 {
-  printf("hello world\n");
+  printf("\nfarenheit to celsius conversion\n_________________________________\n\n");
   float fahr, celsius;
   float lower, step, upper;
   lower = 0;
