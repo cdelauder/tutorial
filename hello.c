@@ -6,11 +6,9 @@
 int main()
 {
   int c;
-  while ((c = getchar()) != EOF) {
-    printf("%d\n", getchar() != EOF);
-    putchar(c);
+  for (c=0; getchar() != EOF; ++c) {
+    printf("%d\n", c);
   }
-  printf("%d\n", getchar() != EOF);
   return 0;
 }
 
